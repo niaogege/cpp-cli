@@ -1,6 +1,6 @@
 {
   "name": "cpp-cli-test",
-  "version": "1.0.3",
+  "version": "1.0.1",
   "description": "chen pp cli test",
   "main": "./bin/index.js",
   "bin": {
@@ -20,8 +20,9 @@
     "handlebars": "^4.7.6",
     "inquirer": "^7.3.3",
     "log-symbols": "^4.0.0",
-    "ora": "^5.1.0",
-    "update-notifier": "^5.0.0"
+    "ora": "^5.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "update-notifier": "^5.0.0"
+  }
 }
