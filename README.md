@@ -20,3 +20,7 @@
 - 动态修改模板里的*package.json*里的name和作者
 - 运用webpack搭建自己的需要的模板
 - 完善*cpp-cli-test*脚手架里的命令行和帮助文档
+- 涉及到的几个包，学习下基本的api
+
+### npm包地址
+*https://www.npmjs.com/package/cpp-cli-test*
