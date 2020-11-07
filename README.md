@@ -2,7 +2,7 @@
 自我练习的脚手架
 
 ### 删除文件夹
-`cpp rm <dir>`
+*cpp rm <dir>*
 
 ### 升级模板
 *cpp upgrade*
@@ -24,3 +24,5 @@
 
 ### npm包地址
 *https://www.npmjs.com/package/cpp-cli-test*
+
+### npm其他操作

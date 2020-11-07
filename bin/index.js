@@ -23,8 +23,8 @@ program
     deleteDir(dir)
   });
 
+// 升级当前包名
 program
-    // 声明的命令
     .command('upgrade')
     .option('-u, --upgrade', 'upgrade version')
     // 描述信息，在帮助信息时显示
@@ -34,6 +34,7 @@ program
       updateChk()
     })
 
+// 设置模板镜像
 program
     .command('mirror <template_mirror>')
     .description('设置自己的镜像模板')
