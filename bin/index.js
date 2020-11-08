@@ -56,6 +56,7 @@ program
     .name('cpp')
     .usage('<commands> [options]')
     .command('init <project_name>')
+    .alias('i')
     .description('项目初始化')
     .action((project) => {
       initProject(project)

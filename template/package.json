@@ -1,28 +1,11 @@
 {
-  "name": "cpp-cli-test",
-  "version": "1.0.1",
-  "description": "chen pp cli test",
-  "main": "./bin/index.js",
-  "bin": {
-    "cpp": "./bin/index.js"
-  },
+  "name": "{{name}}",
+  "version": "8.8.8",
+  "description": "{{description}}",
+  "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "cpp",
-  "license": "ISC",
-  "dependencies": {
-    "chalk": "^4.1.0",
-    "commander": "^6.1.0",
-    "download": "^8.0.0",
-    "fs-extra": "^9.0.1",
-    "handlebars": "^4.7.6",
-    "inquirer": "^7.3.3",
-    "log-symbols": "^4.0.0",
-    "ora": "^5.1.0"
-  },
-  "devDependencies": {
-    "update-notifier": "^5.0.0"
-  }
+  "author": "{{author}}",
+  "license": "ISC"
 }
