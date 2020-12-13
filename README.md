@@ -1,6 +1,7 @@
 
 ## 综述
-全局安装，*cpp-cli-test*脚手架，shell执行*npm i -g cpp-cli-test*即可，*cpp*即被注册到全局bin里
+全局安装，*cpp-cli-test*脚手架，shell执行*npm i -g cpp-cli-test*即可，*cpp*即被注册到全局bin里。
+本人开发的npm包地址*[cpp-cli-test](https://www.npmjs.com/package/cpp-cli-test)*
 
 ### 删除文件夹
 `cpp rm <dir>` 删除文件夹命令
@@ -90,9 +91,6 @@
 - 涉及到的几个包，学习下基本的api
 已经解决，还需要继续学习
 
-### npm包地址
-*https://www.npmjs.com/package/cpp-cli-test*
-
 ### npm其他操作
 全局删除当前的模块
 - 使用命令
@@ -119,21 +117,29 @@ console.log(foo) // /foo/bar/tmp/file
 ```
 
 ### 相关解析
-`#!/usr/bin/env node`
+*`#!/usr/bin/env node`*
 使用过Linux或者Unix的开发者，对于Shebang应该不陌生，它是一个符号的名称，#！。这个符号通常在Unix系统的基本中第一行开头中出现，用于指明这个脚本文件的解释程序。了解了Shebang之后就可以理解，增加这一行是为了指定用node执行脚本文件。
+
 当你输入一个命令的时候，npm是如何识别并执行对应的文件的呢？
 具体的原理阮一峰大神已经在npm scripts 使用指南中介绍过。简单的理解:
 就是输入命令后，会有在一个新建的shell中执行指定的脚本，在执行这个脚本的时候，我们需要来指定这个脚本的解释程序是node。
+
 在一些情况下，即使你增加了这一行，但还是可能会碰到一下错误，这是为什么呢？
 `No such file or directory`
 为了解决这个问题，首先需要了解一下/usr/bin/env。我们已经知道，Shebang是为了指定脚本的解释程序，可是不同用户或者不同的脚本解释器有可能安装在不同的目录下，系统如何知道要去哪里找你的解释程序呢？
-/usr/bin/env就是告诉系统可以在PATH目录中查找。
-所以配置`#!/usr/bin/env node`, 就是解决了不同的用户node路径不同的问题，可以让系统动态的去查找node来执行你的脚本文件。
+
+*/usr/bin/env*就是告诉系统可以在*PATH*目录中查找。
+所以配置*`!/usr/bin/env node*, 就是解决了不同的用户*node路径*不同的问题，可以让系统动态的去查找node来执行你的脚本文件。
 看到这里你应该理解，为什么会出现No such file or directory的错误？因为你的node安装路径没有添加到系统的PATH中。所以去进行node环境变量配置就可以了。
 
 ### NPM 执行脚本的原理
 npm 脚本的原理非常简单。每当执行npm run，就会自动新建一个 Shell，在这个 Shell 里面执行指定的脚本命令。因此，只要是 Shell（一般是 Bash）可以运行的命令，就可以写在 npm 脚本里面。
 比较特别的是，npm run新建的这个 Shell，会将当前目录的node_modules/.bin子目录加入PATH变量，执行结束后，再将PATH变量恢复原样。
+
+### 发布npm包
+- npm adduser
+- npm publish
+> 发布前注意改变npmb包的version版本号，不能跟现在的已有版本重复
 
 ### 参考链接
 - [【工具流脚手架cli】用脚手架整合模板和配置](https://juejin.im/post/6874815221174075405)
