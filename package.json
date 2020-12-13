@@ -6,10 +6,23 @@
   "bin": {
     "cpp": "./bin/index.js"
   },
+  "homepage": "https://github.com/niaogege/cpp-cli",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:niaogege/cpp-cli.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "脚手架",
+    "cli",
+    "template"
+  ],
+  "files": [
+    "bin",
+    "lib"
+  ],
   "author": "cpp",
   "license": "ISC",
   "dependencies": {

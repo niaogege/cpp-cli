@@ -1,11 +1,41 @@
 {
-  "name": "{{name}}",
-  "version": "8.8.8",
-  "description": "{{description}}",
-  "main": "./index.js",
+  "name": "webpack-learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --config build/webpack.config.dev.js --inline --hot",
+    "build": "webpack --config build/webpack.config.prod.js",
+    "report": "npm_config_report=true npm run build"
   },
-  "author": "{{author}}",
-  "license": "ISC"
+  "keywords": [
+    "webpack init project"
+  ],
+  "author": "cpp",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss-loader": "^4.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^1.1.2",
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.5",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^4.2.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^5.4.0"
+  }
 }
